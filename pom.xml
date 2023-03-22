@@ -67,7 +67,7 @@
         <repository>
             <id>github</id>
             <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/baas-devops-ecos/grandcentral-platform-poc-camelk</url>
+            <url>https://maven.pkg.github.com/mertdotcc/issue4124part2</url>
         </repository>
     </distributionManagement>
 </project>

@@ -28,9 +28,7 @@ public class Student {
 
     public enum StudentFacultyEnum {
         ENGINEERING("ENGINEERING"),
-
         SCIENCE("SCIENCE"),
-
         HUMANITIES("HUMANITIES");
 
         private String value;

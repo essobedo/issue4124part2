@@ -2,6 +2,9 @@ package com.mertdotcc.mappingresources.destination;
 
 import java.time.OffsetDateTime;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
+@RegisterForReflection
 public class StudentWithGrades {
 
     private String studentFirstName;

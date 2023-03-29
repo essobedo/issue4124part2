@@ -2,6 +2,9 @@ package com.mertdotcc.mappingresources.source;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
+@RegisterForReflection
 public class StudentGrades {
 
     @JsonProperty("gpa")

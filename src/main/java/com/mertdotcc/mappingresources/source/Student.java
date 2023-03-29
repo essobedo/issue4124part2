@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.time.OffsetDateTime;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
+@RegisterForReflection
 public class Student {
 
     @JsonProperty("studentFirstName")

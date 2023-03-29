@@ -13,28 +13,22 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jackson.version>2.14.1</jackson.version>
+        <camel.quarkus.version>2.16.0</camel.quarkus.version>
 
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
+            <groupId>org.apache.camel.quarkus</groupId>
+            <artifactId>camel-quarkus-core</artifactId>
+            <version>${camel.quarkus.version}</version>
+            <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>${jackson.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-
+        </dependency>        
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
@@ -44,6 +38,19 @@
 
     <build>
         <plugins>
+    		<plugin>
+      			<groupId>io.smallrye</groupId>
+      			<artifactId>jandex-maven-plugin</artifactId>
+      			<version>3.0.5</version>
+      			<executions>
+        			<execution>
+          				<id>make-index</id>
+          				<goals>
+            				<goal>jandex</goal>
+          				</goals>
+        			</execution>
+      			</executions>
+    		</plugin>        
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
